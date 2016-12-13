@@ -6,6 +6,11 @@ namespace Zad1
     {
         public static void Main(string[] Args) 
         {
+            DirectoryInfo filesInformations;
+            DateTime time = new DateTime();
+
+            string[] fileList; //utworzenie tablicy w której będzie przechowywana lista plików w katalogu. 
+            string directory = Directory.GetCurrentDirectory(); //pobranie katalogu w którym znajduje się aplikacja. 
 
             try
             {
@@ -16,14 +21,7 @@ namespace Zad1
                 string[] args = Environment.GetCommandLineArgs(); //pobranie argumentów konsoli. 
                 Console.WriteLine("Pierwsyz argument aplikajci: {0}\n\n", args[0]); //Wyświetlenie pierwsego argumentu z konsoli 
             }
-            DirectoryInfo filesInformations;
-            DateTime time = new DateTime();
-
             
-            string[] fileList; //utworzenie tablicy w której będzie przechowywana lista plików w katalogu. 
-            
-
-            string directory = Directory.GetCurrentDirectory(); //pobranie katalogu w którym znajduje się aplikacja. 
             if (Directory.Exists(directory)) //sprawdzanie czy katalog istnieje, jeśli istnieje wyświetlenie zawartości katalogu. 
             {
                 Console.WriteLine("Katalog istnieje");
