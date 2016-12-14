@@ -1,5 +1,5 @@
---temp-output:C:\Users\berna\Desktop\NET\Zad1\src\Zad1\obj\Debug\netcoreapp1.0\
---out:C:\Users\berna\Desktop\NET\Zad1\src\Zad1\bin\Debug\netcoreapp1.0\Zad1.dll
+--temp-output:C:\Users\berna\Desktop\Zad1\src\Zad1\obj\Debug\netcoreapp1.0\
+--out:C:\Users\berna\Desktop\Zad1\src\Zad1\bin\Debug\netcoreapp1.0\Zad1.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -86,5 +86,5 @@
 --reference:C:\Users\berna\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\berna\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\berna\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
-C:\Users\berna\Desktop\NET\Zad1\src\Zad1\Program.cs
-C:\Users\berna\Desktop\NET\Zad1\src\Zad1\Properties\AssemblyInfo.cs
+C:\Users\berna\Desktop\Zad1\src\Zad1\Program.cs
+C:\Users\berna\Desktop\Zad1\src\Zad1\Properties\AssemblyInfo.cs

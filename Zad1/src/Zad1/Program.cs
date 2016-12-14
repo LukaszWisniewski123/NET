@@ -19,7 +19,7 @@ namespace Zad1
             catch(IndexOutOfRangeException)
             {
                 string[] args = Environment.GetCommandLineArgs(); //pobranie argumentów konsoli. 
-                Console.WriteLine("Pierwsyz argument aplikajci: {0}\n\n", args[0]); //Wyświetlenie pierwsego argumentu z konsoli 
+                Console.WriteLine("Pierwsyz argument aplikajci: {0}\n\n", args[0]); //Wyświetlenie pierwsego argumentu z konsoli \
             }
             
             if (Directory.Exists(directory)) //sprawdzanie czy katalog istnieje, jeśli istnieje wyświetlenie zawartości katalogu. 
@@ -31,8 +31,23 @@ namespace Zad1
                 {   
                     filesInformations = new DirectoryInfo(file); //obiekt klasy DirectoryInfo - do pobrania informacji o ppliku. 
                     time = filesInformations.CreationTime;
-
-                    Console.Write("\nNazwa pliku: {0}\n-Rozszrzenie: {4}\n-Sciezka: {1}\n-Data utworzenia {2}\n-Katalog nadrzedny: {5}\n-Atrybuty: {3}\n\n",filesInformations.Name, filesInformations, time, filesInformations.Attributes, filesInformations.Extension, filesInformations.Parent);  
+                    time.ToLocalTime();
+                    Console.Write("+Nazwa pliku: ");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(""+filesInformations.Name);
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(" -Rozszrzenie: ");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("" + filesInformations.Extension);
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(" -Sciezka: ");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("" + file);
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write(" -Data utworzenia: ");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("" + time);
+                    Console.ForegroundColor = ConsoleColor.Gray;
                 }          
             }  
             else
