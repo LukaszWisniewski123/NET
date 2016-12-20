@@ -7,6 +7,11 @@
 *.o
 *.so
 *.user
+.vs 
+bin
+obj 
+Properties
+*.json
 
 # Packages #
 ############
@@ -36,3 +41,5 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+###################
+
