@@ -4,39 +4,40 @@ namespace Zad1
 {
     public class Program
     {
-        public static void Main(string[] Args) 
+        public static void Main(params string[] args) 
         {
+            
             DirectoryInfo filesInformations;
             DateTime time = new DateTime();
-
-            string[] fileList; //utworzenie tablicy w której będzie przechowywana lista plików w katalogu. 
-            string directory = Directory.GetCurrentDirectory(); //pobranie katalogu w którym znajduje się aplikacja. 
+            
+            string[] fileList; 
+            string directory = Directory.GetCurrentDirectory(); 
 
             try
             {
-                Console.WriteLine("Pierwsyz argument aplikajci: {0}\n\n", Args[0]); //Wyświetlenie pierwsego argumentu z konsoli 
+                Console.WriteLine("Pierwszy argument aplikajci: {0}\n\n", args[0]); 
             }
             catch(IndexOutOfRangeException)
             {
-                string[] args = Environment.GetCommandLineArgs(); //pobranie argumentów konsoli. 
-                Console.WriteLine("Pierwsyz argument aplikajci: {0}\n\n", args[0]); //Wyświetlenie pierwsego argumentu z konsoli \
+                string[] Args = Environment.GetCommandLineArgs(); 
+                Console.WriteLine("Pierwszy argument aplikajci: {0}\n\n", Args[0]); 
             }
             
-            if (Directory.Exists(directory)) //sprawdzanie czy katalog istnieje, jeśli istnieje wyświetlenie zawartości katalogu. 
+            if (Directory.Exists(directory)) 
             {
                 Console.WriteLine("Katalog istnieje");
-                fileList = Directory.GetFiles(directory); //Pobranie listy plików.  
+                fileList = Directory.GetFiles(directory); 
                
                 foreach (string file in fileList)
                 {   
-                    filesInformations = new DirectoryInfo(file); //obiekt klasy DirectoryInfo - do pobrania informacji o ppliku. 
+                    filesInformations = new DirectoryInfo(file); 
                     time = filesInformations.CreationTime;
                     time.ToLocalTime();
                     Console.Write("+Nazwa pliku: ");
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(""+filesInformations.Name);
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.Write(" -Rozszrzenie: ");
+                    Console.Write(" -Rozszerzenie: ");
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("" + filesInformations.Extension);
                     Console.ForegroundColor = ConsoleColor.Gray;
@@ -51,7 +52,7 @@ namespace Zad1
                 }          
             }  
             else
-                Console.WriteLine("katalog nieistnieje.");
+                Console.WriteLine("katalog nie istnieje.");
         }
     }
 }
