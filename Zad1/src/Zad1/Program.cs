@@ -6,12 +6,12 @@ namespace Zad1
     {
         static void Main(string[] args) 
         {
-            DirectoryInfo filesInformations;
-            DateTime time = new DateTime();
+            DirectoryInfo filesInformations;  
+            DateTime time = new DateTime();  
 
             string[] fileList;
-            string directory = "";
-
+            string directory = Directory.GetCurrentDirectory(); 
+            
             try
             {
                 directory = Path.GetDirectoryName(args[0]);
@@ -20,7 +20,7 @@ namespace Zad1
             catch (IndexOutOfRangeException)
             {
                 args = Environment.GetCommandLineArgs();
-                directory = Path.GetDirectoryName(args[0]);
+                directory = Path.GetDirectoryName(args[0]); 
                 Console.WriteLine("katalog args[0] {0}\n\n", directory);
             }
 
@@ -28,25 +28,25 @@ namespace Zad1
             {
                 Console.WriteLine("Katalog istnieje");
                 fileList = Directory.GetFiles(directory);
-
-                foreach (string file in fileList)
+                
+                foreach (string file in fileList) 
                 {
-                    filesInformations = new DirectoryInfo(file);
-                    time = filesInformations.CreationTime;
-                    time.ToLocalTime();
-                    Console.Write("+Nazwa pliku: ");
+                    filesInformations = new DirectoryInfo(file); 
+                    time = filesInformations.CreationTime; 
+                    Console.Write("\n+Nazwa pliku: ");
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("" + filesInformations.Name);
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.Write("--Rozszerzenie: ");
+                    Console.Write("-Rozszerzenie: ");
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("*" + filesInformations.Extension);
+                    Console.WriteLine("*" + filesInformations.Extension);       
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.Write("--Sciezka: ");
+                    Console.Write("-Sciezka: ");
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("" + file);
+                    Console.WriteLine(""+file);
+
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.Write("--Data utworzenia: ");
+                    Console.Write("-Data utworzenia: ");
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("" + time);
                     Console.ForegroundColor = ConsoleColor.Gray;
