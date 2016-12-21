@@ -15,13 +15,13 @@ namespace Zad1
             try
             {
                 directory = Path.GetDirectoryName(args[0]);
-                Console.WriteLine("katalog args[0] {0}\n\n", directory);
+                Console.WriteLine("Katalog z args[0] {0}\n\n", directory);
             }
             catch (IndexOutOfRangeException)
             {
                 args = Environment.GetCommandLineArgs();
                 directory = Path.GetDirectoryName(args[0]); 
-                Console.WriteLine("katalog args[0] {0}\n\n", directory);
+                Console.WriteLine("Katalog z args[0] {0}\n\n", directory);
             }
 
             if (Directory.Exists(directory))
@@ -44,9 +44,8 @@ namespace Zad1
                     Console.Write("-Sciezka: ");
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(""+file);
-
                     Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.Write("-Data utworzenia: ");
+                    Console.Write("-Czas utworzenia: ");
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("" + time);
                     Console.ForegroundColor = ConsoleColor.Gray;
