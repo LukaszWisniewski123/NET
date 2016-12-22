@@ -7,10 +7,10 @@
 *.o
 *.so
 *.user
+
 .vs 
 bin
 obj
-*.json
 
 # Packages #
 ############
