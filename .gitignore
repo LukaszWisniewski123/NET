@@ -9,8 +9,7 @@
 *.user
 .vs 
 bin
-obj 
-Properties
+obj
 *.json
 
 # Packages #
